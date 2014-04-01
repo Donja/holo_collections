@@ -1,4 +1,6 @@
 HoloCollections::Application.routes.draw do
+  resources :provinces
+
   resources :payments
 
   resources :edit_contacts
