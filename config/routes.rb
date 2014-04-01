@@ -1,4 +1,7 @@
 HoloCollections::Application.routes.draw do
+  get "contact/index"
+  get "about/index"
+  get "store/index"
   resources :orders
 
   resources :manufacturers
@@ -9,7 +12,9 @@ HoloCollections::Application.routes.draw do
 
   resources :users
   
-  root :to => 'products#index'
+  root :to => 'store#index'
+  match '/about', to: 'about#index', via: 'get'
+  match '/contact', to: 'contact#index', via: 'get'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
