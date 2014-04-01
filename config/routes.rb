@@ -1,11 +1,11 @@
 HoloCollections::Application.routes.draw do
   resources :orders
 
-  resources :products
-
   resources :manufacturers
 
   resources :categories
+
+  resources :products
 
   resources :users
   
