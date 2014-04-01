@@ -1,4 +1,6 @@
 HoloCollections::Application.routes.draw do
+  resources :orders
+
   resources :manufacturers
 
   resources :categories
