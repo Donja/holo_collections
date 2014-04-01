@@ -15,26 +15,45 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+  
   <div class="field">
-    <%= f.label :manufacturer %><br>
-    <%= f.number_field :manufacturer %>
+    <%= f.label :manufacturer_id %><br>
+    <%= f.number_field :manufacturer_id %>
+    
+    <% Manufacturer.all.each_with_index do |m, index| %>
+    <p>
+      <strong><%= index + 1 %>: </strong> <%= m.name %>
+    </p>
+    <% end %>
+    
   </div>
+  
   <div class="field">
     <%= f.label :category_id %><br>
     <%= f.number_field :category_id %>
+    
+        <% Category.all.each_with_index do |c, index| %>
+      <p>
+        <strong><%= index + 1 %>: </strong> <%= c.name %>
+      </p>
+    <% end %>
   </div>
+  
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
+  
   <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
+  
   <div class="field">
     <%= f.label :stock_quantity %><br>
     <%= f.number_field :stock_quantity %>
   </div>
+  
   <div class="field">
     Image Filename <br>
     <%= f.text_field :image_filname %>
