@@ -1,4 +1,6 @@
 HoloCollections::Application.routes.draw do
+  resources :edit_contacts
+
   resources :abouts
 
   get "contact/index"
