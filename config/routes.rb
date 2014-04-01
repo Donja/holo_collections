@@ -1,4 +1,6 @@
 HoloCollections::Application.routes.draw do
+  resources :abouts
+
   get "contact/index"
   get "about/index"
   get "store/index"
