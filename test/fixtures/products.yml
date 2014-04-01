@@ -3,15 +3,15 @@
 one:
   name: MyString
   manufacturer: 1
-  categort: 1
+  category: 1
   description: MyText
-  price: 
-  stock_quantity: 
+  price: 9.99
+  stock_quantity: 1
 
 two:
   name: MyString
   manufacturer: 1
-  categort: 1
+  category: 1
   description: MyText
-  price: 
-  stock_quantity: 
+  price: 9.99
+  stock_quantity: 1
