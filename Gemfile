@@ -47,8 +47,11 @@ end
 # allows the use of Active Admin
 gem 'activeadmin', github:'gregbell/active_admin'
 
+# allows paginated pages
 gem 'kaminari'
 
+
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
