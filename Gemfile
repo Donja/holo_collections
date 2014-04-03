@@ -35,16 +35,20 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# allows the use of haml
 gem 'haml'
 
+# preps application for Heroku
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
 end
 
-gem 'auto_html'
-
+# allows the use of Active Admin
 gem 'activeadmin', github:'gregbell/active_admin'
+
+gem 'kaminari'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
