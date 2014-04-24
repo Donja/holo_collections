@@ -1,0 +1,56 @@
+// Place all the styles related to the store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#menu{
+	background: #FFF;
+
+	border-top: black solid 1px;
+	border-bottom: black solid 1px;
+
+	padding: 0px auto;
+}
+
+#menu ul li{
+	float: left;
+	margin: 5px;
+	padding: 2px;
+	text-transform: uppercase;
+}
+
+
+
+#menu ul{
+	list-style: none;
+	text-align: center;
+}
+
+
+#menu ul li a{
+	text-decoration: none;
+	color: #79CDCD;
+	font-weight: bold;
+}
+
+a.hover{
+	background: #FFF;
+}
+
+#search{
+	width: 150px;
+	height: 10px;
+	margin: 20px;
+}
+
+section{
+	border-bottom: black solid 2px;
+	padding: 0px auto;
+	background: #FFF;
+}
+
+body{
+	padding: 0px 10%;
+	background: #C1CDCD;
+}

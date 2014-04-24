@@ -1,0 +1,15 @@
+<h1>About Holo Collections</h1>
+
+<table>
+  <tbody>
+    <% @abouts.each do |about| %>
+      <tr>
+        <td><%= about.description %></td>
+        <td><%= link_to 'Edit', edit_about_path(about) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

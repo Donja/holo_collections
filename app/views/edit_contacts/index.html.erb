@@ -1,0 +1,27 @@
+<h1>Contact Information</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Contact num</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @edit_contacts.each do |edit_contact| %>
+      <tr>
+        <td><%= edit_contact.name %></td>
+        <td><%= edit_contact.contact_num %></td>
+        <td><%= edit_contact.email %></td>
+        <td><%= link_to 'Edit', edit_edit_contact_path(edit_contact) %></td>
+        <td><%= link_to 'Destroy', edit_contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

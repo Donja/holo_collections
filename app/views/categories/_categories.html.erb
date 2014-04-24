@@ -1,0 +1,39 @@
+<section>
+
+    <h3><%= link_to product.name, product %></h3>
+
+  
+  <% if product.image_file_name.present? %>
+    <p>
+      <%= image_tag product.image_file_name, height: '400' %>
+    </p>
+  <% end %>
+  
+  <% if product.manufacturer.present? %>
+    <p>
+      <strong>Manufacturer: </strong>
+      <%= product.manufacturer.name%>
+    </p>
+  <% end %>
+  
+  <% if product.category.present? %>
+    <p>
+      <strong>Category: </strong>
+      <%= product.category.name%>
+    </p>
+  <% end %>
+  
+  <p>
+    <h4>Product Description:</h4>
+    <%= product.description %>
+  </p>
+  
+  <p>
+    <strong>Price: </strong><%= number_to_currency product.price %>
+  </p>
+  
+  <p>
+    Stock Quantity: <%= product.stock_quantity %>
+  </p>
+  
+</section>

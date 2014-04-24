@@ -1,0 +1,32 @@
+<header>
+  <h1><img src="/assets/logo.png" style="max-height : 150px"> Holo Collections</h1>
+</header>
+
+<div id="menu">
+  <ul>
+    <li><%= link_to 'Home', root_path%></li>
+    <li><%= link_to 'Products', products_path%></li>
+    <li><%= link_to 'Contact Us', 'contact#index'%></li>
+    <li><%= link_to 'About Us', 'about#index'%></li>    
+  </ul>
+</br>
+  <%= form_tag search_results_path, method: 'get' do %>
+    <p>
+      <%= text_field_tag :search %>
+      <%= submit_tag "Search" %>
+
+      <%= radio_button_tag 'category', 'all', true %>
+      <%= label_tag 'All' %>
+
+      <%= radio_button_tag 'category', 'pvc' %>
+      <%= label_tag "PVC" %>
+      
+      <%= radio_button_tag 'category', 'figma' %>
+      <%= label_tag 'Figma' %>
+
+      <%= radio_button_tag 'category', 'nendoroid' %>
+      <%= label_tag 'Nendoroid' %>
+    </p>
+  <% end %>
+</div>
+
