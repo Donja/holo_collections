@@ -186,6 +186,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  cocaine
   coffee-rails (~> 4.0.0)
   haml
   jbuilder (~> 1.2)

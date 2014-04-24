@@ -19,7 +19,7 @@ class Product < ActiveRecord::Base
   
   #before_save :destroy_image?
   
-  before_validation { self.image.destroy if self.image_delete = '1' }
+  # before_validation { self.image.destroy if self.image_delete = '1' }
   
   def image_delete=(value)
     if value == '1'
@@ -30,9 +30,30 @@ class Product < ActiveRecord::Base
   def image_delete
   end
     
-  def self.search(search)
+  def self.search(search, category)
     search = "%" + search + "%"
-    Product.where("name LIKE ? OR description LIKE ?", search, search)
+
+    if category == 'pvc'
+
+      Product.where("(name LIKE ? OR description LIKE ?) AND category_id = 1", search, search).order(:name)
+
+    elsif category == 'figma'
+
+      Product.where("(name LIKE ? OR description LIKE ?) AND category_id = 2", search, search).order(:name)
+
+    elsif category == 'nendoroid'
+
+      Product.where("(name LIKE ? OR description LIKE ?) AND category_id = 3", search, search).order(:name)
+
+    else
+
+
+
+        Product.where("name LIKE ? OR description LIKE ?", search, search)
+        #Product.where("name LIKE ? OR description LIKE ?", search, search)
+
+    end
+    
   end
     
 end

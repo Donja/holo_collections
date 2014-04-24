@@ -52,6 +52,8 @@ gem 'kaminari'
 
 
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+
+gem "cocaine"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
