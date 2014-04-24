@@ -31,8 +31,8 @@ class Product < ActiveRecord::Base
   end
     
   def self.search(search)
-    search_condition = "%" + search + "%"
-    find(:all, :conditions => ['title LIKE ? OR description LIKE ?', search_condition, search_condition])
+    search = "%" + search + "%"
+    Product.where("name LIKE ? OR description LIKE ?", search, search)
   end
     
 end

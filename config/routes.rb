@@ -12,6 +12,8 @@ HoloCollections::Application.routes.draw do
   get "contact/index"
   get "about/index"
   get "store/index"
+  get 'search_results' => 'store#search_results', as: 'search_results'
+
   resources :orders
 
   resources :manufacturers
